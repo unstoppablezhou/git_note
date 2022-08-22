@@ -42,4 +42,14 @@ git push
 
 
 
-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
+git提交到github最后一步git push发生错误，原因是github上的文件目录结构与本地不同，这时需要将它们合并后重新提交。这里需要注意的是合并命令需要vpn翻墙，不然连不上，main跟master是一个意思，主要看你库里的是哪个词
+
+```
+git pull --rebase origin main
+
+git push origin main
+```
+
+
+
+在git提交时第二部git commit -m “xx” 出错，可能是你的本地项目与github上的项目分支(main)不同，需要另建一个分支提交，最后合并分支，删除新创建的分支
